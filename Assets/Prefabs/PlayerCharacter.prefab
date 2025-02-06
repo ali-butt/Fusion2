@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 6169603735102207718}
   - component: {fileID: -7824455728426012579}
   - component: {fileID: 1260138348110824082}
+  - component: {fileID: -3554310550995205810}
+  - component: {fileID: -2146947566490773211}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -132,6 +134,8 @@ MonoBehaviour:
   - {fileID: 6169603735102207718}
   - {fileID: -7824455728426012579}
   - {fileID: 1260138348110824082}
+  - {fileID: -3554310550995205810}
+  - {fileID: -2146947566490773211}
   ForceRemoteRenderTimeframe: 0
 --- !u!143 &396143163156705369
 CharacterController:
@@ -206,3 +210,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meshRenderer: {fileID: 774623768377612369}
   _NetworkedColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &-3554310550995205810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5494372465462911541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e012f6619a88f5c4c8dbc39634c8df2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _NetworkedHealth: 100
+--- !u!114 &-2146947566490773211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5494372465462911541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fbfd87805f3a30428028969ef45495c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 10
+  playerMovement: {fileID: -7824455728426012579}

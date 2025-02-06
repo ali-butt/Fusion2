@@ -6,7 +6,8 @@ using Fusion;
 public class PlayerColor : NetworkBehaviour
 {
     public MeshRenderer meshRenderer;
-    [Networked] public Color NetworkedColor { get; set; }
+    [Networked, OnChangedRender(nameof(ColorChanged))]
+    public Color NetworkedColor { get; set; }
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +22,11 @@ public class PlayerColor : NetworkBehaviour
         {
             // Changing the material color here directly does not work since this code is only executed on the client pressing the button and not on every client.
             NetworkedColor = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), 1);
-
-
         }
+    }
+
+    void ColorChanged()
+    {
         meshRenderer.material.color = NetworkedColor;
     }
 }
