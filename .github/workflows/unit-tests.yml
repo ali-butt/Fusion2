@@ -13,6 +13,8 @@ jobs:
 
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}  # Add your Unity license in repo secrets
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           projectPath: .
           testMode: all  # Runs both Edit Mode & Play Mode tests
