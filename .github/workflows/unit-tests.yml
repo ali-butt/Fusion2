@@ -1,0 +1,19 @@
+name: Unit Tests
+on: push 
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Run Tests
+        uses: game-ci/unity-test-runner@v4
+
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}  # Add your Unity license in repo secrets
+        with:
+          projectPath: .
+          testMode: all  # Runs both Edit Mode & Play Mode tests
+    
