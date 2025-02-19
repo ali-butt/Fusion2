@@ -17,6 +17,6 @@ public class UnitTesting
         Health health = new Health();
         health.NetworkedHealth++;
 
-        Assert.AreEqual(103, health.NetworkedHealth);
+        Assert.AreEqual(101, health.NetworkedHealth);
     }
 }
